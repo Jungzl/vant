@@ -527,6 +527,7 @@ export default {
 | label-align | 表单项 label 对齐方式，可选值为 `center` `right` `top` | _string_ | `left` |
 | input-align | 输入框对齐方式，可选值为 `center` `right` | _string_ | `left` |
 | error-message-align | 错误提示文案对齐方式，可选值为 `center` `right` | _string_ | `left` |
+| tip-message-align | 提示文案对齐方式，可选值为 `center` `right` | _string_ | `left` |
 | validate-trigger | 表单校验触发时机，可选值为 `onChange`、`onSubmit`，支持通过数组同时设置多个值，具体用法见下方表格 | _string \| string[]_ | `onBlur` |
 | colon | 是否在 label 后面添加冒号 | _boolean_ | `false` |
 | disabled | 是否禁用表单中的所有输入框 | _boolean_ | `false` |
@@ -536,6 +537,7 @@ export default {
 | scroll-to-error | 是否在提交表单且校验不通过时滚动至错误的表单项 | _boolean_ | `false` |
 | show-error | 是否在校验不通过时标红输入框 | _boolean_ | `false` |
 | show-error-message | 是否在校验不通过时在输入框下方展示错误提示 | _boolean_ | `true` |
+| show-tip-message | 是否在输入框下方展示提示 | _boolean_ | `true` |
 | submit-on-enter | 是否在按下回车键时提交表单 | _boolean_ | `true` |
 
 > 表单项的 API 参见：[Field 组件](#/zh-CN/field#api)

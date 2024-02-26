@@ -495,6 +495,7 @@ export default {
 | label-align | Field label align, can be set to `center` `right` `top` | _string_ | `left` |
 | input-align | Field input align, can be set to `center` `right` | _string_ | `left` |
 | error-message-align | Error message align, can be set to `center` `right` | _string_ | `left` |
+| tip-message-align | Tip message align, can be set to `center` `right` | _string_ | `left` |
 | validate-trigger | When to validate the form, can be set to `onChange`、`onSubmit`, supports using array to set multiple values | _string \| string[]_ | `onBlur` |
 | colon | Whether to display colon after label | _boolean_ | `false` |
 | disabled | Whether to disable form | _boolean_ | `false` |
@@ -504,6 +505,7 @@ export default {
 | scroll-to-error | Whether to scroll to the error field when validation failed | _boolean_ | `false` |
 | show-error | Whether to highlight input when validation failed | _boolean_ | `false` |
 | show-error-message | Whether to show error message when validation failed | _boolean_ | `true` |
+| show-tip-message | Whether to show tip message | _boolean_ | `true` |
 | submit-on-enter | Whether to submit form on enter | _boolean_ | `true` |
 
 ### Data Structure of Rule

@@ -13,6 +13,8 @@
   --van-field-right-icon-color: var(--van-gray-6);
   --van-field-error-message-color: var(--van-danger-color);
   --van-field-error-message-font-size: 12px;
+  --van-field-tip-message-color: var(--van-text-color-3);
+  --van-field-tip-message-font-size: 12px;
   --van-field-text-area-min-height: 60px;
   --van-field-word-limit-color: var(--van-gray-7);
   --van-field-word-limit-font-size: var(--van-font-size-sm);
@@ -186,6 +188,20 @@
   &__error-message {
     color: var(--van-field-error-message-color);
     font-size: var(--van-field-error-message-font-size);
+    text-align: left;
+
+    &--center {
+      text-align: center;
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__tip-message {
+    color: var(--van-field-tip-message-color);
+    font-size: var(--van-field-tip-message-font-size);
     text-align: left;
 
     &--center {

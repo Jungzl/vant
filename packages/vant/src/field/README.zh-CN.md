@@ -190,6 +190,21 @@ export default {
 </van-cell-group>
 ```
 
+### 帮助提示
+
+设置 `tip-message` 属性显示提示。
+
+```html
+<van-cell-group inset>
+  <van-field
+    v-model="phone"
+    label="手机号"
+    placeholder="请输入手机号"
+    tip-message="手机号格式为11位数字"
+  />
+</van-cell-group>
+```
+
 ### 插入按钮
 
 通过 button 插槽可以在输入框尾部插入按钮。
@@ -365,6 +380,8 @@ export default {
 | error | 是否将输入内容标红 | _boolean_ | `false` |
 | error-message | 底部错误提示文案，为空时不展示 | _string_ | - |
 | error-message-align | 错误提示文案对齐方式，可选值为 `center` `right` | _FieldTextAlign_ | `left` |
+| tip-message | 底部提示文案，为空时不展示 | _string_ | - |
+| tip-message-align | 提示文案对齐方式，可选值为 `center` `right` | _FieldTextAlign_ | `left` |
 | formatter | 输入内容格式化函数 | _(val: string) => string_ | - |
 | format-trigger | 格式化函数触发的时机，可选值为 `onBlur` | _FieldFormatTrigger_ | `onChange` |
 | arrow-direction | 箭头方向，可选值为 `left` `up` `down` | _string_ | `right` |
@@ -451,6 +468,7 @@ fieldRef.value?.focus();
 | right-icon | 自定义输入框尾部图标 | - |
 | button | 自定义输入框尾部按钮 | - |
 | error-message | 自定义底部错误提示文案 | _{ message: string }_ |
+| tip-message | 自定义底部提示文案 | _{ message: string }_ |
 | extra | 自定义输入框最右侧的额外内容 | - |
 
 ## 主题定制
@@ -474,6 +492,8 @@ fieldRef.value?.focus();
 | --van-field-right-icon-color          | _var(--van-gray-6)_       | -    |
 | --van-field-error-message-color       | _var(--van-danger-color)_ | -    |
 | --van-field-error-message-font-size   | _12px_                    | -    |
+| --van-field-tip-message-color         | _var(--van-text-color-3)_ | -    |
+| --van-field-tip-message-font-size     | _12px_                    | -    |
 | --van-field-text-area-min-height      | _60px_                    | -    |
 | --van-field-word-limit-color          | _var(--van-gray-7)_       | -    |
 | --van-field-word-limit-font-size      | _var(--van-font-size-sm)_ | -    |

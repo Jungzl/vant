@@ -90,6 +90,7 @@ export const fieldSharedProps = {
   autocapitalize: String,
   autocorrect: String,
   errorMessage: String,
+  tipMessage: String,
   enterkeyhint: String,
   clearTrigger: makeStringProp<FieldClearTrigger>('focus'),
   formatTrigger: makeStringProp<FieldFormatTrigger>('onChange'),
@@ -121,6 +122,7 @@ export const fieldProps = extend({}, cellSharedProps, fieldSharedProps, {
   labelAlign: String as PropType<FieldTextAlign>,
   showWordLimit: Boolean,
   errorMessageAlign: String as PropType<FieldTextAlign>,
+  tipMessageAlign: String as PropType<FieldTextAlign>,
   colon: {
     type: Boolean,
     default: null,
@@ -588,6 +590,23 @@ export default defineComponent({
       }
     };
 
+    const renderTip = () => {
+      if (form && form.props.showTipMessage === false) {
+        return;
+      }
+
+      const message = props.tipMessage;
+      if (message) {
+        const slot = slots['tip-message'];
+        const tipMessageAlign = getProp('tipMessageAlign');
+        return (
+          <div class={bem('tip-message', tipMessageAlign)}>
+            {slot ? slot({ message }) : message}
+          </div>
+        );
+      }
+    };
+
     const renderLabel = () => {
       const labelWidth = getProp('labelWidth');
       const labelAlign = getProp('labelAlign');
@@ -632,7 +651,7 @@ export default defineComponent({
         {slots.button && <div class={bem('button')}>{slots.button()}</div>}
       </div>,
       renderWordLimit(),
-      renderMessage(),
+      renderMessage() || renderTip(),
     ];
 
     useExpose<FieldExpose>({

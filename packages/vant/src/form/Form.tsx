@@ -37,7 +37,9 @@ export const formProps = {
   validateFirst: Boolean,
   submitOnEnter: truthProp,
   showErrorMessage: truthProp,
+  showTipMessage: truthProp,
   errorMessageAlign: String as PropType<FieldTextAlign>,
+  tipMessageAlign: String as PropType<FieldTextAlign>,
   validateTrigger: {
     type: [String, Array] as PropType<
       FieldValidateTrigger | FieldValidateTrigger[]

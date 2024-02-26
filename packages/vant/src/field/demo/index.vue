@@ -4,6 +4,7 @@ import CustomType from './CustomType.vue';
 import Disabled from './Disabled.vue';
 import ShowIcon from './ShowIcon.vue';
 import Required from './Required.vue';
+import TipInfo from './TipInfo.vue';
 import ErrorInfo from './ErrorInfo.vue';
 import InsertButton from './InsertButton.vue';
 import FormatValue from './FormatValue.vue';
@@ -20,6 +21,7 @@ import LabelAlign from './LabelAlign.vue';
   <show-icon />
   <required />
   <error-info />
+  <tip-info />
   <insert-button />
   <format-value />
   <autosize />

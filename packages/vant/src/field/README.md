@@ -170,6 +170,21 @@ Use `error` or `error-message` to show error info.
 </van-cell-group>
 ```
 
+### Tip Info
+
+Use `tip-message` to show tip info.
+
+```html
+<van-cell-group inset>
+  <van-field
+    v-model="phone"
+    label="Phone"
+    placeholder="Phone"
+    tip-message="Phone number should be 10 digits"
+  />
+</van-cell-group>
+```
+
 ### Insert Button
 
 Use button slot to insert button.
@@ -336,6 +351,9 @@ Use `label-align` prop to align the input value, can be set to `center`, `right`
 | error | Whether to mark the input content in red | _boolean_ | `false` |
 | error-message | Error message | _string_ | - |
 | error-message-align | Error message align, can be set to `center` `right` | _FieldTextAlign_ | `left` |
+| error | Whether to mark the input content in red | _boolean_ | `false` |
+| tip-message | Tip message | _string_ | - |
+| tip-message-align | Tip message align, can be set to `center` `right` | _FieldTextAlign_ | `left` |
 | formatter | Input value formatter | _(val: string) => string_ | - |
 | format-trigger | When to format value, can be set to `onBlur` | _FieldFormatTrigger_ | `onChange` |
 | arrow-direction | Can be set to `left` `up` `down` | _string_ | `right` |
@@ -445,6 +463,8 @@ The component provides the following CSS variables, which can be used to customi
 | --van-field-right-icon-color | _var(--van-gray-6)_ | - |
 | --van-field-error-message-color | _var(--van-danger-color)_ | - |
 | --van-field-error-message-font-size | _12px_ | - |
+| --van-field-tip-message-color | _var(--van-text-color-3)_ | - |
+| --van-field-tip-message-font-size | _12px_ | - |
 | --van-field-text-area-min-height | _60px_ | - |
 | --van-field-word-limit-color | _var(--van-gray-7)_ | - |
 | --van-field-word-limit-font-size | _var(--van-font-size-sm)_ | - |

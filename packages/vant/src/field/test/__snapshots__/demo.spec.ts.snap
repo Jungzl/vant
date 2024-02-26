@@ -390,6 +390,34 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <div class="van-cell-group van-cell-group--inset">
+    <div class="van-cell van-field">
+      <div class="van-cell__title van-field__label">
+        <label
+          id="van-field-label"
+          for="van-field-input"
+        >
+          Phone
+        </label>
+      </div>
+      <div class="van-cell__value van-field__value">
+        <div class="van-field__body">
+          <input
+            type="text"
+            id="van-field-input"
+            class="van-field__control"
+            placeholder="Phone"
+            aria-labelledby="van-field-label"
+          >
+        </div>
+        <div class="van-field__tip-message">
+          Phone number should be 11 digits
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="van-cell-group van-cell-group--inset">
     <div class="van-cell van-cell--center van-field">
       <div class="van-cell__title van-field__label">
         <label

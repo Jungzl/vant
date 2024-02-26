@@ -78,7 +78,8 @@ export type FieldFormSharedProps =
   | 'labelWidth'
   | 'labelAlign'
   | 'inputAlign'
-  | 'errorMessageAlign';
+  | 'errorMessageAlign'
+  | 'tipMessageAlign';
 
 export type FieldExpose = {
   blur: () => void | undefined;
